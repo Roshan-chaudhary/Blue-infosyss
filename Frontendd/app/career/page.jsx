@@ -166,7 +166,7 @@ const page = () => {
                     Be part of our team as a Node/Next.js Developer and work on
                     backend and server-side rendered applications. Help us
                     develop scalable and efficient solutions, ensuring top-notch
-                    performance and security. If you have experience in Node.js,
+                    performance and security.If you have experience in Node.js,
                     Next.js, and API integration, this role is perfect for you!
                   </p>
                   <button
