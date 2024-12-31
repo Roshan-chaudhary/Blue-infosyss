@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+*:not(i) {
+  font-family: "Poppins", sans-serif !important;
+}
+::-webkit-scrollbar {
+  background: white;
+  width: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background: #0b7be5;
+}
+.icon {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+.service-visitor-card .head img {
+  height: 5rem;
+  width: 5rem !important;
+  min-width: 5rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.service-visitor-card .footer p {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.technology__tab {
+  margin-bottom: 10px !important;
+}
+@media screen and (max-width: 768px) {
+  .service__home--card-icon {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 575px) {
+  .mission-img {
+    margin: 0 auto;
+  }
+}
+.promient-it-solution div:hover div svg g path,
+.promient-it-solution div:hover div svg g g {
+  fill: #0b7be5 !important;
+}
+.process__card--middle span {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+.info__card img {
+  margin: 0 auto;
+}
+.thumbs-card-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.goal__list--card-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* img {
+  filter: hue-rotate(120deg) saturate(150%) !important;
+} */
+.navbar-brand img {
+  filter: none !important;
+}
+.footer__aside ul li span svg g path,
+.footer__aside ul li span svg path {
+  fill: #0b7be5 !important;
+}
+.icon svg path {
+  fill: #0b7be5;
+}
+li.tick::after {
+  color: #0b7be5 !important;
+}
+.process__card--middle::after,
+.process__card--middle::before {
+  background-color: #809ddb !important;
+}
+.roadmap__box--img-circular .block .img img {
+  position: relative;
+  z-index: -1;
+}
+.navbar-nav .show {
+  visibility: visible !important;
+}
+.technology__content img {
+  filter: none !important;
+}
+.image-item img {
+  filter: none !important;
+}
+.tech .left img {
+  filter: none !important;
+}
+.activities__list img {
+  filter: none !important;
+}
+.team img {
+  /* filter: none !important; */
+}
+.accordion .active .accordion__content {
+  display: block !important;
+}
+.img-blue img {
+  filter: hue-rotate(85deg) !important;
+}
+.css-ot336b-MuiInputBase-root-MuiOutlinedInput-root.Mui-focused
+  .MuiOutlinedInput-notchedOutline {
+  border-color: #86b7fe !important;
+}
+.css-ot336b-MuiInputBase-root-MuiOutlinedInput-root.Mui-focused
+  .MuiOutlinedInput-notchedOutline {
+  border-width: 1px !important;
+}
+.css-ot336b-MuiInputBase-root-MuiOutlinedInput-root {
+  height: 44px !important;
+}
+.css-1ll44ll-MuiOutlinedInput-notchedOutline:hover {
+  border-color: #86b7fe !important;
+}
+.css-1ll44ll-MuiOutlinedInput-notchedOutline {
+  border-color: #86b6fe93 !important;
+}
+.MuiInputBase-root {
+  height: 44px !important;
+}
