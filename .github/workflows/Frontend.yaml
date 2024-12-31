@@ -1,4 +1,4 @@
-name: Deploy Frontend in ECR
+name: Deploy Frontend in ECR with Sonarqube Test
 
 on:
   push:
@@ -46,7 +46,7 @@ jobs:
 
 
 
-        
+
     # Login to Amazon ECR
     - name: Login to Amazon ECR
       id: login-ecr

@@ -4,11 +4,11 @@ name: SonarQube:Test
 on:
   push:
     branches:
-      - main
+      - mainn
 
 jobs:
   build:
-    name: Build and analyze
+    name: Sonarqube Test
     runs-on: ubuntu-latest
     
     steps:
