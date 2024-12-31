@@ -8,7 +8,10 @@ WORKDIR /app
 COPY package*.json ./
 
 # Install dependencies
-RUN npm install --legacy-peer-deps
+# Install dependencies
+RUN npm install --legacy-peer-deps && \
+    npm install @mui/material @emotion/react @emotion/styled
+
 
 # Copy the rest of the application code
 COPY . .
