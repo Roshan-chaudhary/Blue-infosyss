@@ -1,9 +1,10 @@
+
 name: SonarQube:Test
 
 on:
   push:
     branches:
-      - mainn
+      - main
 
 jobs:
   build:
@@ -23,11 +24,18 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
 
-      # If you wish to fail your job when the Quality Gate is red, uncomment the
-      # following lines. This would typically be used to fail a deployment.
-      # - name: Quality Gate
-      #   uses: sonarsource/sonarqube-quality-gate-action@v1
-      #   timeout-minutes: 5
-      #   env:
-      #     SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-      #
+      # Wait for SonarQube Quality Gate status : Optional
+      - name: Check SonarQube Quality Gate status
+        run: |
+          QUALITY_GATE_STATUS=$(curl -s -X GET -u ${{ secrets.SONAR_TOKEN }} "https://sonarcloud.io/api/qualitygates/project_status?projectKey=Full-stack:Test" | jq -r '.projectStatus.status')
+          if [[ "$QUALITY_GATE_STATUS" != "OK" ]]; then
+            echo "Quality Gate failed. Code not allowed to be pushed to ECR."
+            exit 1
+          fi
+
+      # If you wish to fail your job when the Quality Gate is red, uncomment the following lines.
+      - name: Quality Gate
+        uses: sonarsource/sonarqube-quality-gate-action@v1
+        timeout-minutes: 5
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
