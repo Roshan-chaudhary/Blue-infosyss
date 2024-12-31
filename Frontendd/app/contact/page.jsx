@@ -51,7 +51,7 @@ const page = () => {
                           <img src="/mail.svg" alt="" />
                         </div>
                         <div className="content">
-                          <h3>Our Email</h3>
+                          <h3>our Email</h3>
                           <h4>
                             <a href="mailto:bluefoxpvtltd@gmail.com">
                               bluefoxpvtltd@gmail.com
