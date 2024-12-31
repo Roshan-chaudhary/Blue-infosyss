@@ -21,6 +21,9 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: us-east-1
 
+
+
+
     # Run SonarQube Scan
     - name: SonarQube Scan
       uses: sonarsource/sonarqube-scan-action@v4
@@ -39,6 +42,11 @@ jobs:
           exit 1
         fi
 
+
+
+
+
+        
     # Login to Amazon ECR
     - name: Login to Amazon ECR
       id: login-ecr
